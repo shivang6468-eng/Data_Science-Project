@@ -1,2 +1,15 @@
-# Auto detect text files and perform LF normalization
+# Automatically detect line endings for all files
 * text=auto
+
+# Python Source Files
+*.py text diff=python
+*.py3 text diff=python
+
+# Jupyter Notebooks (force LF line endings to avoid diff conflicts)
+*.ipynb text eol=lf
+
+# Binary files (ensure Git treats them correctly)
+*.pyc binary
+*.pyo binary
+*.pkl binary
+*.db binary
